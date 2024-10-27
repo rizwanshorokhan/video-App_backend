@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Backend of videoApp Project",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon src/server.js"
   },
   "keywords": [
     "JavaScript",
@@ -12,5 +13,8 @@
     "videoApp"
   ],
   "author": "mrCoder404 (rks)",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
 }
