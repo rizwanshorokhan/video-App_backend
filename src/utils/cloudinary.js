@@ -8,7 +8,7 @@ cloudinary.config({
 });
 
 
-const uploadOnCloudinary = async (localFilePath)=>{
+export const uploadOnCloudinary = async (localFilePath)=>{
    try {
       if(!localFilePath) return null
       // upload the file on cloudinary
@@ -17,6 +17,7 @@ const uploadOnCloudinary = async (localFilePath)=>{
       })
       // file has been uploaded successfully
       console.log("file is uploaded on cloudinary", response.url);
+      fs.unlinkSync(localFilePath)
       return response
    } catch (error) {
       fs.unlinkSync(localFilePath) // remove the file from localfilepath as the upload operation got failed

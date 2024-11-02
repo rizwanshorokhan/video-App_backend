@@ -2,7 +2,9 @@ import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './db/db.js';
 import {app} from './app.js'
-dotenv.config(); // No need for 'path' if .env is in the root directory
+dotenv.config({
+   path:'./.env'
+}); // No need for 'path' if .env is in the root directory
 
 
 
